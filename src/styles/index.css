@@ -1,0 +1,21 @@
+.slick-track {
+  display: flex;
+}
+
+.ant-carousel {
+  position: relative !important;
+}
+
+.slick-dots.slick-dots-bottom {
+  position: absolute;
+  display: flex !important;
+  bottom: 12px;
+}
+
+.slick-dots.slick-dots-bottom button {
+  color: transparent !important;
+}
+
+.ant-card-body {
+  display: none !important;
+}

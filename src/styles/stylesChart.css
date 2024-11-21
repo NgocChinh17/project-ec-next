@@ -1,0 +1,14 @@
+:where(.css-dev-only-do-not-override-49qm).ant-row {
+  display: flex !important;
+  min-width: 0;
+}
+
+:where(.css-49qm).ant-row {
+  display: flex;
+  flex-flow: row;
+  min-width: 0;
+}
+
+:where(.css-dev-only-do-not-override-49qm).ant-row {
+  flex-flow: row;
+}
