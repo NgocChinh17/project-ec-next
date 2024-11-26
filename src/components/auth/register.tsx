@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-// import type { FormProps } from "antd"
+import type { FormProps } from "antd"
 import { Button, Form, Input } from "antd"
 import Link from "next/link"
 
@@ -14,9 +14,9 @@ type FieldType = {
 }
 
 const Register = () => {
-  // const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  //   console.log("Success:", values)
-  // }
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    console.log("Success:", values)
+  }
 
   return (
     <div
@@ -42,7 +42,7 @@ const Register = () => {
         wrapperCol={{ span: 40 }}
         style={{ width: "100%", padding: "10px 20px 0 20px" }}
         initialValues={{ remember: true }}
-        // onFinish={onFinish}
+        onFinish={onFinish}
         autoComplete="off"
         layout="vertical"
       >

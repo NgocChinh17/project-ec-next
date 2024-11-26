@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 // import type { FormProps } from "antd"
-import { Button, Checkbox, Form, Input, Space } from "antd"
+import { Button, Checkbox, Form, FormProps, Input, Space } from "antd"
 import Link from "next/link"
 import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons"
 
@@ -12,9 +12,9 @@ type FieldType = {
 }
 
 const Login = () => {
-  // const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  //   console.log("Success:", values)
-  // }
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    console.log("Success:", values)
+  }
 
   return (
     <div
@@ -42,7 +42,7 @@ const Login = () => {
         wrapperCol={{ span: 40 }}
         style={{ width: "100%", padding: "15px 20px 0 20px" }}
         initialValues={{ remember: true }}
-        // onFinish={onFinish}
+        onFinish={onFinish}
         autoComplete="off"
         layout="vertical"
       >

@@ -2,7 +2,7 @@
 
 import React from "react"
 import { Button, Form, Input } from "antd"
-// import type { FormProps } from "antd"
+import type { FormProps } from "antd"
 
 type FieldType = {
   username?: string
@@ -12,9 +12,9 @@ type FieldType = {
 }
 
 const FormContact = () => {
-  // const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  //   console.log("Success:", values)
-  // }
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    console.log("Success:", values)
+  }
 
   return (
     <>
@@ -24,7 +24,7 @@ const FormContact = () => {
         wrapperCol={{ span: 16 }}
         style={{ maxWidth: 600, marginTop: 16 }}
         initialValues={{ remember: true }}
-        // onFinish={onFinish}
+        onFinish={onFinish}
         autoComplete="off"
         layout="vertical"
       >

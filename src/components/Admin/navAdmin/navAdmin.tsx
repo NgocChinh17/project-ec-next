@@ -6,14 +6,16 @@ import {
   PieChartOutlined,
   PlusCircleOutlined,
   ProductOutlined,
+  UnorderedListOutlined,
   UserAddOutlined,
   UserOutlined,
 } from "@ant-design/icons"
-import { Button, Flex, Menu, MenuProps, MenuTheme, Switch } from "antd"
+import { Button, Flex, Menu, MenuProps } from "antd"
 
 import DashboardAdmin from "../dashboardAdmin/dashboardAdmin"
 import ManagementProducts from "../managementProducts/managementProducts"
 import ManagementUser from "../managementUser/managementUser"
+import UserOrderProduct from "../managementUserOrder/userOrderProduct"
 
 interface ClickEvent {
   key: string
@@ -37,6 +39,11 @@ const items: MenuItem[] = [
         icon: <PlusCircleOutlined />,
         label: "Create Product",
       },
+      {
+        key: "Management Orders Products",
+        icon: <UnorderedListOutlined />,
+        label: "User Order Product",
+      },
     ],
   },
   {
@@ -51,15 +58,10 @@ const items: MenuItem[] = [
 
 const NavAdmin = () => {
   const [collapsed, setCollapsed] = useState(false)
-  const [theme, setTheme] = useState<MenuTheme>("light")
   const [keySelected, setKeySelected] = useState("Dashboard")
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed)
-  }
-
-  const changeTheme = (value: boolean) => {
-    setTheme(value ? "dark" : "light")
   }
 
   const handleOnClick = ({ key }: ClickEvent) => {
@@ -72,6 +74,8 @@ const NavAdmin = () => {
         return <DashboardAdmin />
       case "CreateProduct":
         return <ManagementProducts />
+      case "Management Orders Products":
+        return <UserOrderProduct />
       case "CreateUser":
         return <ManagementUser />
       default:
@@ -89,14 +93,6 @@ const NavAdmin = () => {
         >
           {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
         </Button>
-
-        <Switch
-          checked={theme === "dark"}
-          onChange={changeTheme}
-          checkedChildren="Dark"
-          unCheckedChildren="Light"
-          style={{ marginTop: 2 }}
-        />
       </Flex>
 
       <Flex>
@@ -104,7 +100,6 @@ const NavAdmin = () => {
           selectedKeys={[keySelected]}
           onClick={handleOnClick}
           mode="inline"
-          theme={theme}
           inlineCollapsed={collapsed}
           items={items}
           style={{ height: "100vh", maxHeight: "85vh" }}
