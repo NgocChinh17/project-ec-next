@@ -32,12 +32,12 @@ const HeaderAdmin = () => {
     },
     {
       key: "2",
-      label: "Thôn tin tài khoản",
+      label: <Link href={"/profile"}>Thôn tin tài khoản</Link>,
       icon: <ProfileOutlined />,
     },
     {
       key: "3",
-      label: "Lịch Sử Mua Hàng",
+      label: <Link href={"/history"}>Lịch Sử Mua Hàng</Link>,
       icon: <HistoryOutlined />,
     },
     {
