@@ -30,18 +30,22 @@ const Footer = () => {
           <span>Nhận bản tin làm đẹp từ chúng tôi</span>
           <span>
             <Space style={{ width: "100%" }}>
-              <Input style={{ width: 300 }} placeholder="Nhập email của bạn" />
-              <Button
-                style={{
-                  backgroundColor: "#ffb9a4",
-                  color: "#a05139",
-                  marginLeft: "-8px",
-                  height: "31px",
-                }}
-                type="primary"
-              >
-                Submit
-              </Button>
+              <Input
+                style={{ width: 300 }}
+                placeholder="Nhập email của bạn"
+                allowClear
+                suffix={
+                  <Button
+                    style={{
+                      backgroundColor: "#ffb9a4",
+                      color: "#a05139",
+                      marginRight: "-8px",
+                    }}
+                  >
+                    Submit
+                  </Button>
+                }
+              />
             </Space>
           </span>
         </div>
