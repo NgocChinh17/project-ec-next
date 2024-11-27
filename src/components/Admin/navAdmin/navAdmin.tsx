@@ -89,7 +89,7 @@ const NavAdmin = () => {
         <Button
           type="primary"
           onClick={toggleCollapsed}
-          style={{ marginBottom: 16 }}
+          style={{ marginBottom: 16, width: 81 }}
         >
           {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
         </Button>

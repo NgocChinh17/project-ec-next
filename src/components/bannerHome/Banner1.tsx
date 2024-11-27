@@ -24,7 +24,7 @@ const Banner1 = () => {
             <div style={{ float: "right", marginLeft: 20 }}>
               <h3>Thanh Toán</h3>
               <p style={{ wordWrap: "break-word", width: "400px" }}>
-                Khách hàng có thể lựa chọn một hoặc nhiều hình thức thanh toánd
+                Khách hàng có thể lựa chọn một hoặc nhiều hình thức thanh toán
               </p>
             </div>
           </div>

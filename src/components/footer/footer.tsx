@@ -35,6 +35,8 @@ const Footer = () => {
                 style={{
                   backgroundColor: "#ffb9a4",
                   color: "#a05139",
+                  marginLeft: "-8px",
+                  height: "31px",
                 }}
                 type="primary"
               >

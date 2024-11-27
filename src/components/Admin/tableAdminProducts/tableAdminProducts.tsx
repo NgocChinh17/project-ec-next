@@ -14,6 +14,8 @@ import type { TableColumnsType } from "antd"
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons"
 import type { FormProps } from "antd"
 
+import "../../../styles/stylesTableAdminProducts.css"
+
 const { RangePicker } = DatePicker
 
 interface DataType {
@@ -94,6 +96,7 @@ const TableAdminProducts = () => {
     {
       title: "Action",
       dataIndex: "action",
+      width: 100,
       render: renderAction,
     },
   ]
